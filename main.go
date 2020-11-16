@@ -8,8 +8,7 @@ import (
 )
 
 func main() {
-	myProducts := arr.Array()
-	fmt.Printf("%v\n", myProducts)
+	sliceOrArray()
 }
 
 func variableAndDataType() {
@@ -45,4 +44,12 @@ func loop() {
 		sum += i
 	}
 	println(sum)
+}
+
+func sliceOrArray() {
+	myProducts := arr.Array()
+	fmt.Printf("%v\n", myProducts)
+	myProducts = arr.RemoveWithKeepOrder(myProducts, 1)
+	println("After removed...")
+	fmt.Printf("%v\n", myProducts)
 }

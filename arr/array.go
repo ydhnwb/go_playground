@@ -13,3 +13,14 @@ func Array() []string {
 	// fmt.Printf("len of products is %d, capaicty is %d %v\n", len(products), cap(products), products)
 	return products
 }
+
+// RemoveWithKeepOrder is removing an element while maintains the order
+func RemoveWithKeepOrder(slice []string, s int) []string {
+	return append(slice[:s], slice[s+1:]...)
+}
+
+// Remove the element of an array
+func Remove(s []string, i int) []string {
+	s[i] = s[len(s)-1]
+	return s[:len(s)-1]
+}
