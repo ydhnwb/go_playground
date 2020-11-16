@@ -5,10 +5,11 @@ import (
 	"strconv"
 
 	"github.com/ydhnwb/go_playground/arr"
+	"github.com/ydhnwb/go_playground/models"
 )
 
 func main() {
-	sliceOrArray()
+	generateStudents()
 }
 
 func variableAndDataType() {
@@ -52,4 +53,12 @@ func sliceOrArray() {
 	myProducts = arr.RemoveWithKeepOrder(myProducts, 1)
 	println("After removed...")
 	fmt.Printf("%v\n", myProducts)
+}
+
+func generateStudents() {
+	var students []models.Student
+	for i := 0; i < 10; i++ {
+		students = append(students, models.Create(i, "Student "+strconv.Itoa(i), 22, false))
+	}
+	fmt.Printf("%v\n", students)
 }
