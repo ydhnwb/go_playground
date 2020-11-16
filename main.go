@@ -1,11 +1,15 @@
 package main
 
 import (
+	"fmt"
 	"strconv"
+
+	"github.com/ydhnwb/go_playground/arr"
 )
 
 func main() {
-
+	myProducts := arr.Array()
+	fmt.Printf("%v\n", myProducts)
 }
 
 func variableAndDataType() {
